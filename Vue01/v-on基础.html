@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="../Js/vue.js"></script>
+
+
+
+    <div id="app">
+        <input type="button" value="v-on指令" v-on:click="doIT" />
+        <input type="button" value="v-on简写" @click="doIT" />
+        <input type="button" value="双击事件" @dblclick="doIT" />
+        <h2 @click="changeFood">{{food}}</h2>
+    </div>
+
+
+    <div id="app2">
+
+        <button @click="sub">-</button>
+        <span>{{num}}</span>
+        <button @click="add">+</button>
+    </div>
+    
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                food:"西蓝花炒蛋",
+            },
+            methods:{
+                doIT:function(){
+                    alert("doIT")
+                },
+                changeFood:function(){
+                    // console.log(this.food)
+                    this.food+="好好吃"
+                }
+            }
+        })
+
+
+        var app2 = new Vue({
+            el:"#app2",
+            data:{
+                num:1,
+            },
+            methods:{
+                add:function(){
+                    
+                    if(this.num<10)
+                    {
+                        this.num++;
+                    }
+                    else
+                    {
+                        alert("不能再加啦")
+                    }
+                },
+                sub:function(){
+                    
+                    if(this.num>0)
+                    {
+                        this.num--;
+                        
+                    }
+                    else
+                    {
+                        alert("不能再减少啦")
+                    }
+
+                }
+            }
+        })
+
+
+    </script>
+</body>
+</html>

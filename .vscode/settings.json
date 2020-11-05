@@ -1,0 +1,6 @@
+{
+    "editor.fontSize": 16,
+    "editor.formatOnPaste": true,
+    "editor.fontFamily": "Hack, 'Courier New', monospace",
+    "editor.suggest.snippetsPreventQuickSuggestions": false
+}
