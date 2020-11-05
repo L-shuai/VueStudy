@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../Js/vue.js"></script>
+
+    <div id="app">
+
+        <img src="img/IMG_20190809_141150.jpg" width="500" alt="">
+        <img v-bind:src="imgSrc" width="500" alt="">
+
+    </div>
+
+
+    <script>
+
+        var app = new Vue({
+            el:"#app",
+            data:{
+                imgSrc:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1604550114665&di=c240a511c2f35461548f9e2a7f9473ea&imgtype=0&src=http%3A%2F%2Fattachments.gfan.com%2Fforum%2F201503%2F19%2F211608ztcq7higicydxhsy.jpg",
+
+            },
+            methods: {
+                
+            },
+        })
+    </script>
+</body>
+</html>

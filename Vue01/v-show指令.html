@@ -6,7 +6,35 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>v-show 1111222333</h1>
+    <script src="../Js/vue.js"></script>
     
+    <h1>v-show </h1>
+    
+    <div id="app">
+        <img src="img/IMG_20190809_141150.jpg" width="500" v-show="isShow" alt="">
+        <img src="img/IMG_20190809_141150.jpg" width="500" v-show="age>=18" alt="">
+        <button @click="changeIsShow">切换显示状态</button>
+        <button @click="addAge">累加年龄</button>
+    </div>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                isShow:false,
+                age:17
+            },
+            methods: {
+                changeIsShow:function(){
+                    this.isShow=!this.isShow
+                },
+                addAge:function(){
+                    this.age++;
+                }
+            },
+
+        })
+
+    </script>
+
 </body>
 </html>
